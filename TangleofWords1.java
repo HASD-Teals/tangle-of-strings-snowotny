@@ -19,30 +19,43 @@ public static void main(String[] args) {
 			if (number == 1) { // Reverses the letter order.
 				String String2 = scanner.nextLine();
 				phraseReverse(String2);
+				System.out.println("");
+				System.out.println("End of Program");
 			}
 			if (number == 2) { //only produces words of a certain length
 				String String2 = scanner.nextLine();
 				wordList(String2);
+				System.out.println("");
+				System.out.println("End of Program");
 			}
 			if (number == 3) { //prints out number of vowels in string
 				String String2 = scanner.nextLine();
 				vowels(String2);
+				System.out.println("");
+				System.out.println("End of Program");
 			}
 			if (number == 4) { //Changes upper case to lower and lower to upper case
 				String String2 = scanner.nextLine();
 				caseInverse(String2);
+				System.out.println("");
+				System.out.println("End of Program");
 			}
 			if (number == 5) { //Compares to strings to check if they are equal
 				String String2 = scanner.nextLine();
 				System.out.println("What would you like the second string to contain?");
 				String String3 = scanner.nextLine();
 				isMatch(String2, String3);
+				System.out.println("");
+				System.out.println("End of Program");
 			}				
 			if (number == 6) { //Finds word in a string and replaces it with new word.
 				String String2 = scanner.nextLine();
 				findReplace(String2);	
+				System.out.println("");
+				System.out.println("End of Program");
 			}
 			if (number == 7) {
+				System.out.println("");
 				System.out.println("End of Program");
 			}
 }
@@ -57,16 +70,40 @@ public static void menu() {
 	System.out.println("7. Quit");
 	}
 public static void phraseReverse(String String2) {
+	System.out.println("Here is your reversed phrase : ");
 	System.out.println(String2);
 }
 public static void wordList(String String2) {
+	System.out.println("Here is your word list : ");
 	System.out.println(String2);
 }
 public static void vowels(String String2) {
-	System.out.println(String2);
+	for (int i=0; i<String2.length(); i++) {
+		int vowel = String2.indexOf(i++);	
+		if(vowel == 65 || vowel == 97) {
+			System.out.println("");
+		}
+		if(vowel == 69 || vowel == 101) {
+			System.out.println("");
+		}
+		if(vowel == 105 || vowel == 73) {
+			System.out.println("");
+		}
+		if(vowel == 111 || vowel == 79) {
+			System.out.println("");
+		}
+		if(vowel == 117 || vowel == 85) {
+			System.out.println("");
+		}
+	}
 }
 public static void caseInverse(String String2) {
-	System.out.println(String2.toUpperCase());
+	int number = String2.indexOf(0);
+	if (number <= 90) {
+		System.out.println(String2.toUpperCase());	
+	} else {
+		System.out.println(String2.toLowerCase());
+	}	
 }
 public static void isMatch(String String2, String String3) {
 	System.out.print("The result of the matching is : ");
