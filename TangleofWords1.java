@@ -1,5 +1,6 @@
 import java.util.Scanner;
 public class TangleofWords1 {
+@SuppressWarnings("resource")
 public static void main(String[] args) {
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("What is the password?");
@@ -14,6 +15,7 @@ public static void main(String[] args) {
 	int number = scanner.nextInt();
 	if (number <= 6) {
 		System.out.println("What String would you like to use?");
+		@SuppressWarnings("unused")
 		String String2 = scanner.nextLine();
 			}
 			if (number == 1) { // Reverses the letter order.
@@ -81,7 +83,7 @@ public static void vowels(String String2) {
 	for (int i=0; i<String2.length(); i++) {
 		int vowel = String2.indexOf(i++);	
 		if(vowel == 65 || vowel == 97) {
-			System.out.println("");
+			System.out.println(1);
 		}
 		if(vowel == 69 || vowel == 101) {
 			System.out.println("");
@@ -99,11 +101,26 @@ public static void vowels(String String2) {
 }
 public static void caseInverse(String String2) {
 	int number = String2.indexOf(0);
-	if (number <= 90) {
-		System.out.println(String2.toUpperCase());	
-	} else {
-		System.out.println(String2.toLowerCase());
-	}	
+	int number2 = String2.indexOf(1);
+	int number3 = String2.indexOf(2);
+		if (number <= 90) {
+			System.out.println(String2.toUpperCase());	
+		} 
+		if (number > 90){
+			System.out.println(String2.toLowerCase());
+		}	
+		if (number2 <= 90) {
+			System.out.println(String2.toUpperCase());
+		}
+		if(number2 > 90) {
+			System.out.println(String2.toLowerCase());
+		}
+		if (number3 > 90) {
+			System.out.println(String2.toUpperCase());
+		}
+		if (number3 <= 90) {
+			System.out.println(String2.toLowerCase());
+		}
 }
 public static void isMatch(String String2, String String3) {
 	System.out.print("The result of the matching is : ");
